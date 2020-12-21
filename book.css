@@ -1,0 +1,519 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+    /* background-image: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2019/06/Wonder-Woman-1984-textless-movie-poster.jpg"); */
+}
+#intro {
+    background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/PDaTSuJ/videoblocks-particles-dust-abstract-light-motion-titles-cinematic-background-loop_h9bpbii7i_thumbnail-1080_01.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+#headCapt {
+    margin: auto;
+    margin-top: 200px !important;
+    color: white;
+    filter: none;
+}
+nav{
+    box-shadow: 0 8px 8px -2px rgba(0,0,0,.2);
+}
+
+.white-text{
+    color: white !important;
+    filter: brightness(100%);
+
+}
+
+.icons {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+.iconsDiv{
+  margin-bottom: 15em;
+}
+
+.icons li {
+  list-style:none;
+  margin:0 5px;
+}
+
+.icons li a .fa {
+  font-size: 28px;
+  color: #262626;
+  line-height:30px;
+  transition: .5s;
+  padding-right: 40px;
+}
+
+.icons li a span {
+  padding:0;
+  margin:0;
+  position:absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 4px;
+  transition: .5s;
+}
+
+.icons li a {
+  text-decoration: none;
+  display:absolute;
+  display:block;
+  width:90px;
+  height:30px;
+  background: #fff;
+  text-align:left;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0,0);
+  transition:.5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+.icons li a:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.icons li a:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.icons li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+.icons li:hover .fa {
+  color:#fff;
+}
+
+.icons li:hover span {
+  color:#fff;
+}
+
+.icons li:hover:nth-child(1) a{
+  background: #3b5998;
+}
+.icons li:hover:nth-child(1) a:before{
+  background: #365492;
+}
+.icons li:hover:nth-child(1) a:after{
+  background: #4a69ad;
+}
+
+.icons li:hover:nth-child(2) a{
+  background: #00aced;
+}
+.icons li:hover:nth-child(2) a:before{
+  background: #097aa5;
+}
+.icons li:hover:nth-child(2) a:after{
+  background: #53b9e0;
+}
+
+.icons li:hover:nth-child(3) a{
+  background: #dd4b39;
+}
+.icons li:hover:nth-child(3) a:before{
+  background: #b33a2b;
+}
+.icons li:hover:nth-child(3) a:after{
+  background: #e66a5a;
+}
+
+.icons li:hover:nth-child(4) a{
+  background: #e4405f;
+}
+ul li:hover:nth-child(4) a:before{
+  background: #d81c3f;
+}
+.icons li:hover:nth-child(4) a:after{
+  background: #e46880;
+}
+
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    background: pr;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    margin-top: 3em !important;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+
+  hr {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    border: 9 !important;
+    border-top: 2px solid #ffffff !important;
+  }
+
+ #contact{
+     margin-top: 50px;
+    
+
+ }
+
+ .mb-5{
+    margin-left: 45px;
+ }
+
+ /* form class */
+ .p-5{
+     margin-top: -4em;
+ }
+ 
+#map{
+    height: 500px;
+    width: 700px;
+    margin: 15em;
+    margin-top: -550px;
+    margin-left: 700px;
+}
+
+/* contact us text */
+.mb-5  {
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2019/06/Wonder-Woman-1984-textless-movie-poster.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* get connected footer text */
+.mb-0 {
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://i.pinimg.com/originals/15/02/f2/1502f27efadcafab32b8b159fcd9e5dc.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+i{
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2019/06/Wonder-Woman-1984-textless-movie-poster.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+h6{
+   color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://i.pinimg.com/originals/15/02/f2/1502f27efadcafab32b8b159fcd9e5dc.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+#login, #sign{
+  background-color: white !important;
+  background: url("https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Book ticket */
+/* Modal Sign Up */
+.form-dark .font-small {
+  font-size: 0.8rem; }
+
+.form-dark [type="radio"] + label,
+.form-dark [type="checkbox"] + label {
+  font-size: 0.8rem; }
+
+.form-dark [type="checkbox"] + label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px; }
+
+.form-dark .md-form label {
+  color: #fff; }
+
+.form-dark input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=email]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-dark input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=password]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-dark input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  z-index: 0;
+  border: 1.5px solid #fff;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+
+.form-dark input[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent #00c851 #00c851 transparent;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  /* -webkit-backface-visibility: hidden; */
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+
+.form-dark .modal-header {
+    border-bottom: none;
+}
+
+
+.modal-color{
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://wallpapercave.com/wp/wp2602308.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Book a ticket form */
+
+.btn-select-book{
+  max-width: 150px !important;
+  max-height: 50px !important;
+  background-color: transparent !important;
+  outline: white !important;
+  color: #fff;
+	padding: 20px 40px;
+	border-style: none;
+	background-color: rgba(0,0,0,0);
+	text-shadow: #000 0 2px 2px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+  display: inline-block;
+  border-color: white !important;
+  border: 2px;
+}
+
+.btnConfirm_Selection{
+  max-width: 200px !important;
+  max-height: 120px !important;
+  background-color: transparent !important;
+  outline: white !important;
+  color: #fff;
+	padding: 20px 40px;
+	border-style: none;
+	background-color: rgba(0,0,0,0);
+	text-shadow: #000 0 2px 2px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+  display: inline-block;
+  border-color: white !important;
+  border: 2px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+
+}
+
+.btn-select-book:active, 
+.btn-select-book:focus 
+{
+  outline: 1px;
+  box-shadow: 1px white !important;
+ }
+
+ .form-group {
+   color: white;
+ }
+
+ .flex-book{
+   margin-top: -8em;
+   margin-left: 10em  !important;
+ }
+
+.seat{
+  max-width: 35px;
+  max-height: 35px;
+}
+
+.table-bordered{
+  max-width: 800px !important;
+  margin: 50px !important;
+  margin-left: 400px !important;
+  color: black;
+  text-align: center;
+
+}
+
+.hr{
+  
+  border: 0 !important; 
+  margin-top: 5em !important;
+  height: 1px !important; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0) !important;
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0) !important;
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0) !important;
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0) !important; 
+}
+
+/* .submitBtn{
+	margin-top:50px;
+}
+.form-inline{
+	margin-top: 50px;
+}
+.form-group{
+	margin-left:260px;
+}
+.table-responsive{
+	margin-top: 50px;
+}
+#title{
+	font-size: 20px;
+	margin-top: 50px;
+}
+#screen{
+	width:91%;
+	border:1px solid #000;
+	text-align: center;
+	margin-left: 7%;
+	margin-top: 50px;
+	background-color: #7662FC;
+}
+#table-screen{
+	margin-top: 50px;
+	margin-left:50px;
+	border-spacing: 10px;
+  	border-collapse: separate;
+}
+#table-screen-row{
+	margin-top:10px;
+}
+.screen-map{
+	margin-left: 50%;
+	margin-top:-50px;
+}
+.reserved-seat{
+	margin-left:4px;
+	/*content: '';*/
+    /*background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAFT0lEQVRoge2ZXYhUZRjHf885M+dYK5Yb6sygW7HtOrtbeyFCXxQVVmYYVJR9UFL0RUQSRiEFVhdWF10WJGpu32YRQp+IFl7kRRFYrDPjWtYqM21Jlp8778w5TxcayMzsnvfMznYR+4O5ed/ned////B+D0wxxRRTTDHFFP8fZDIazWX86yTUZQhXAJlTxUWQHaGwqbdY3trqPltqZPdcv8up6gDCpRGh3wSuLO87UN7bqr6bMjLUzozQ9x9QdBnQDfhADrgAmGHZzGFgL9ADlIE9gryvlfK67EGOxNUU20guNe0qkXAA6Iiba8mvDuG93aXqjjhJsYzk0/5i0I+BabGkxeeEIjf3lMpf2iZYGxma7XcGrn6P/dCZKEdDVxb0HigP2QQ7tq0GLgP8dyYApkvAOttgKyO5jL8U9PLmNTWHoFcWUv4NNrFWRkRZOTFJzaNO+KRNXOQcGcyc0eFqsI8Yw7DFhAlxz7ugeGL/eEGR4lytLrGJm0ScgOr1kUFRASJycWv0NI+GEnVSiDYyGpjHjpaMF4h7rqguR9nZGnljo8gOFe5OiNtRKplkWc3jUTmxd3YFKWSS96PyKiePJq3kGPBItmTejps4ppH8XK9fq6xyRK9WZAaQE+Qdzy+/dv4vjBZS/hIV3QIkJiD8dCUVAmdxdmR0+645tPniP4roXcB8QQ+DbA9DXuwZMT9aGylkvDtUGQC8BtXfm6RZ1D/MoXzKexnhqVb4UOGFnqJZPTirLeW6lS8R+huEGRGWzy+a92sr6ubI7jneheOYAFjgGW8AwHjmJeD4RAwAIPydGDWvACQS5s0xTAB4qmwcSnm9tRV1RhyHpxjbxL8dL82nkwv7hzmEyABQRnWbwBqUZWGol4aVRMYkTXupZJLZkhGTNO2VIJlSdKHCrSo8D3zByQ+xtutPDu/JTFukyLURtv2q8HS9pBryaW8YmBfRGAibs0Vz+w8dzHRPUOn7g6OROQ34LsOZ0w1u9iBH8mnvM8DmSDKcLZlzTy9oNFHPtFKg3DI02+/sGi7/BDCU8nqrjlzjKBcp9IGmQWaATj/VzxHgL+AQsFuEQQn0q65i5VuBcE/a6wlhsVXf0FZbUGdEhCFVzrFozA0cfSaf8fLAQ4HSKapojdvTmHnqdz6wQBXUEQoZr5SDtaHShf12UIg0oqoDIJdYNSfcV6M8PkpaYHWcFEE31pbVTfagvbJBkVjXzP8W/braXhmoLa0z0jeISZTLS4G3YcLfu5Uo8BaVyk19g5jaynHHZC7trRJYM2nSYqDwTE/JjKll3ENjNUhuQKi0XlZsqlpJvDFewLhGLvr92AjKp63V1BSf9B48XhovIPIYr6Gsb52e5rDRELluK7iFtLcPm91+cvitVDLzrobqeEHRN0QIBN5qna54CGyIMgG2ryihsx4IJqwqPqETyAabQCsj3SOjPwPvTUhSEwhs6vr95FkuCuvXkXJoHgE+b1pVXFS3acU8bBse686uIPk5/o04epujXKZCB1F3F3slFZT9wE4RPuwumi3S6pPFDx3MLKS9Nbvm1B+fJ4v9czmjkPJW7zuPs23irR4OklVvhcIq3/EfzKXDNwVna1hxd40cPP6HzYpig4K7e1bbLCdZ7Rd00bGAexBSZtQDzPNR+VZDK5/x9qJ01nUu3NVTNC1ZBHIZ705R3m1QNZQtme6ofLvJrnJWbZEoe38rms1W+RZki+YDGlyYQOv6boTtqvVRg8xnWzWs4NTGKzxXX+HU990AKyPlsLxSkLXAUeAAIivmF82mWEotOPleJU8AB4AjIK+3OWWrvzT+AcI627XxON34AAAAAElFTkSuQmCC');*/
+}
+.empty-seat{
+	cursor: pointer;
+	/*content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADo0lEQVRoge2ZTWhcVRiGn9OkxZoYDAo1iwS1VrFaF1XwZyFStNVKXQhqK+JGFFeiVRfqonWhYMFtUWmFqlgUN4o/oAV1oVKkigulTfyrWSRFpa2Nsb95XNwTOiQzc8/NnEk288Bsbr77vd97zpm533cDHTp06NChQ4cOTVHXqjvVYXUifobVHeptC11fKeoK9WvL+Uq9bKHrRe1TN6t71cPqpLpPPZpgYpqj8Z7JmGOv+oR63nyZuEU9WKHgqvyu3txuE7er/7XRxDST6roqtYUKJpYD3wF9VRdgjkwAq0MIIynBiyok3sX8mQDoBXZkzahumIfj1Ig7UmpM3ZEnW1iHVnkqJaj0O6IOAb9R7RjmZAq4OIQw2iwopbj1iXHtYhFQ+guWUuD1rdfSMje2nEHtURerQ+qDprUgrfKler86qHarPRkWY5axoD6kHm+DgQn1gdwFX6PuVsc920ttVs+Jf1+vnspo4qS6JubuUZ9Wv4/a4+rb6qqqJjaqJxoI7lP7Y9xLGY08H3NepP7QIOaEujHVxNVNTEzzQYztV//NYOKI2hdzfloSe1xdmWLkjUTx62L89ph8j/qCeq96gzpgYbS7xvQy9Vr1bnWr+onFQmyLMbcmau9KMfJHYrJ3awrsTdru+nrnGmcQ9eNE7YMz88x6sqt/ARck1HAGuCKE8Eu8byWwBlgFXAUMUDSZvUA3cAw4AhwGfgJ+BD4Hvg0hTKlXxmspHfnfIYQLay901wkaSTTSBTyn7gceAZaXxPfHzyXA6prrY+prwArSx4oDpRHqo4nbu5A8PLPuekdrCfAZ0N5xc+58AawLIZysvTir14oBG4C3AOentiQE3gTummmi/E59ZqHPUA3PNqu16ZdLXQaMAosrrUB+TgNDIYSxRgFN2/gQwiHgo9xVzYEPm5mAtHlkZ6ZiWqG0hpRRt4ti1B3MUdEcGAcGQwinmwWV7kgI4QzFr8VC8XqZCUh8kqqXAsMUT/P5ZAq4fLoNakbSS4UQwq/A7larmgPvpJiohMXUltqd5mCPFd7MJ7/7jWYCcCdwD3ATMAQsqbQijTlF8cz6BngPeD+EkLezsJg5XrQdbzMaay5Vt6jn50y6NW73n+rLFv9eGDBOf5k0uizm9bXqNnUsam7JpYH6c4NzvCmjxqYGGsO5NIg7MZORNuzI/jo6h3JpoL5SR+C+bAJndTbW0dmeU6BHfVU9po6qj2VLPlvr8ajxT1zApSn3/Q8KBo9y075dxAAAAABJRU5ErkJggg==')*/
+}
+.booked-seat{
+	cursor: pointer;
+	content: url('https://img.icons8.com/ios-filled/50/000000/armchair.png');
+}
+.error{
+  font-size: 20px;
+  font-weight: 700;
+  font-family: monospace;
+
+} */
+

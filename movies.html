@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premiers</title>
+    <link rel="stylesheet" href="movies.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+  
+          <div class="container">
+  
+              <!-- Navbar brand -->
+              <a class="navbar-brand" href="#"><a href="#"><img src="https://fontmeme.com/permalink/201130/5725fd677a99182031abd3057e54c3cc.png" alt="netflix-font" border="0"></a></a>
+  
+              <!-- Collapse button -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+  
+              <!-- Collapsible content -->
+              <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+                  <!-- Links -->
+                  <ul class="navbar-nav mr-auto smooth-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link" href="landing.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html" target="blank" >Premiers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="book.html" target="_blank">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="results.html" >TV Shows / Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" >Contact</a>
+                    </li>
+                </ul>
+  
+                   <!-- Modal trigger -->
+                  <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"  data-toggle="modal" data-target="#modalRegisterForm"><span><i class="fa fa-user-plus" aria-hidden="true" id="sign"></i></span> Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#ModalForm"><span class="fas fa-sign-in-alt"><i class="fa fa-sign-in" id="login" aria-hidden="true"></i>
+                      </span> Login</a>   
+                      
+                    </li>
+                  </ul>
+  
+                  <!-- Modal -->
+                   <!-- Modal login -->
+                   <div class="modal fade" id="ModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                   aria-hidden="true"  data-backdrop="false">
+                   <div class="modal-dialog" role="document">
+                       <!--Content-->
+                       <div class="modal-content form-elegant">
+                       <!--Header-->
+                       <div class="modal-header text-center">
+                           <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3 modal-color" id="myModalLabel"><strong>Sign in</strong></h3>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                           </button>
+                       </div>
+                       <!--Body-->
+                       <div class="modal-body mx-4" >
+                           <!--Body-->
+                           <div class="md-form  pb-3">
+                           <input type="email" id="Form-email1" class="form-control validate">
+                           <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
+                           </div>
+  
+                           <div class="md-form  pb-3">
+                           <input type="password" id="Form-pass1" class="form-control validate">
+                           <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+                           <p class="font-small blue-text d-flex justify-content-end ">Forgot <a href="#" class=" blue-text ml-1">
+                               Password?</a></p>
+                           </div>
+  
+                           <div class="text-center mb-3">
+                           <button type="button" class="btn-modal btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
+                           </div>
+                           <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+                           with:</p>
+  
+                           <div class="row my-3 d-flex justify-content-center">
+                           <!--Facebook-->
+                           <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png"/></button>
+                           <!--Twitter-->
+                           <button type="button" class="btn mr-md-3 z-depth-1a"><img src="https://img.icons8.com/fluent/48/000000/vk-com.png"/></button>
+                           <!--Google +-->
+                           <button type="button" class="btn btn-white btn-rounded z-depth-1a"><img src="https://img.icons8.com/fluent/48/000000/google-logo.png"/></button>
+                           </div>
+                       </div>
+                       <!--Footer-->
+                       <div class="modal-footer text-center">
+                           <p class="font-small grey-text text-center">Not a member? <a href="#" class="blue-text" data-toggle="modal" data-target="#modalRegisterForm">
+                               Sign Up</a></p>
+                       </div>
+                       </div>
+                       <!--/.Content-->
+                   </div>
+                   </div>
+                   <!-- Modal login -->
+  
+                   <!-- Modal sign up -->
+                   <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                   aria-hidden="true"  data-backdrop="false">
+                   <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                       <div class="modal-header text-center">
+                           <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3 modal-color" id="myModalLabel"><strong>Sign up</strong></h3>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                           </button>
+                       </div>
+                       <div class="modal-body mx-3">
+                           <div class="md-form mb-4 ">
+                           <input type="text" id="orangeForm-name" class="form-control validate">
+                           <label data-error="wrong" data-success="right" for="orangeForm-name">Your name</label>
+                           </div>
+  
+                           <div class="md-form mb-4 ">
+                           <input type="email" id="orangeForm-email" class="form-control validate">
+                           <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+                           </div>
+  
+                           <div class="md-form mb-4 ">
+                           <input type="password" id="orangeForm-pass" class="form-control validate">
+                           <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+                           </div>
+  
+                           <p class="fieldset">
+                               <input type="checkbox" id="accept-terms">
+                               <label for="accept-terms">I agree to the <a href="#0" data-toggle="modal" data-target=".terms-modal">Terms</a></label>
+                           </p>
+  
+                       </div>
+                       <div class="modal-footer d-flex justify-content-center">
+                           <button class="btn btn-deep-orange">Sign up</button>
+                       </div>
+                       </div>
+                   </div>
+                   </div>
+                   <!-- Modal sign up -->
+  
+                   <!-- Modal Terms & Conditions -->
+  
+                   <div class="wrap" data-backdrop="false">
+                         
+                    <div class="modal fade terms-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-backdrop="false">
+                      
+                      <div class="modal-dialog modal-lg">
+                        
+                        <!-- Modal Content: begins -->
+                        <div class="modal-content">
+                          
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                              <h4 class="modal-title text-primary" id="gridSystemModalLabel">Terms and Conditions</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                  </button>
+  
+                          </div>
+                        
+                          <!-- Modal Body -->  
+                          <div class="modal-body" data-backdrop="false"> 
+                            <div class="body-message" data-backdrop="false" >
+                              <h3">To create an account with JavaFlix, please read and agree to our Terms & Conditions and Privacy Notice</h3>
+                              <p><p>1. Introduction</p>
+  
+                              <p>Welcome to JavaFlix (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;)!</p>
+                              
+                              <p>These Terms of Service (&ldquo;Terms&rdquo;, &ldquo;Terms of Service&rdquo;) govern your use of our website located at javaflix.com (together or individually &ldquo;Service&rdquo;) operated by JavaFlix.</p>
+                              
+                              <p>Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages.</p>
+                              
+                              <p>Your agreement with us includes these Terms and our Privacy Policy (&ldquo;Agreements&rdquo;). You acknowledge that you have read and understood Agreements, and agree to be bound of them.</p>
+                              
+                              <p>If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at javaflix@gmail.com so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service.</p>
+                              
+                              <p>2. Communications</p>
+                              
+                              <p>By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at javaflix@gmail.com.</p>
+                              
+                              <p>3. Purchases</p>
+                              
+                              <p>If you wish to purchase any product or service made available through Service (&ldquo;Purchase&rdquo;), you may be asked to supply certain information relevant to your Purchase including but not limited to, your credit or debit card number, the expiration date of your card, your billing address, and your shipping information.</p>
+                              
+                              <p>You represent and warrant that: (i) you have the legal right to use any card(s) or other payment method(s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct and complete.</p>
+                              
+                              <p>We may employ the use of third party services for the purpose of facilitating payment and the completion of Purchases. By submitting your information, you grant us the right to provide the information to these third parties subject to our Privacy Policy.</p>
+                              
+                              <p>We reserve the right to refuse or cancel your order at any time for reasons including but not limited to: product or service availability, errors in the description or price of the product or service, error in your order or other reasons.</p>
+                              
+                              <p>We reserve the right to refuse or cancel your order if fraud or an unauthorized or illegal transaction is suspected.</p>
+                              
+                              <p>4. Contests, Sweepstakes and Promotions</p>
+                              
+                              <p>Any contests, sweepstakes or other promotions (collectively, &ldquo;Promotions&rdquo;) made available through Service may be governed by rules that are separate from these Terms of Service. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms of Service, Promotion rules will apply.</p>
+                              
+                              <p>5. Refunds</p>
+                              
+                              <p>We issue refunds for Contracts within 30 days of the original purchase of the Contract.</p>
+                              
+                              <p>6. Content</p>
+                              
+                              <p>Content found on or through this Service are the property of JavaFlix or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.</p>
+                              
+                              <p>7. Prohibited Uses</p>
+                              
+                              <p>You may use Service only for lawful purposes and in accordance with Terms. You agree not to use Service:</p>
+                              
+                              <p>0.1. In any way that violates any applicable national or international law or regulation.</p>
+                              
+                              <p>0.2. For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.</p>
+                              
+                              <p>0.3. To transmit, or procure the sending of, any advertising or promotional material, including any &ldquo;junk mail&rdquo;, &ldquo;chain letter,&rdquo; &ldquo;spam,&rdquo; or any other similar solicitation.</p>
+                              
+                              <p>0.4. To impersonate or attempt to impersonate Company, a Company employee, another user, or any other person or entity.</p>
+                              
+                              <p>0.5. In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful, or in connection with any</p>
+                              
+                              <p>www.javaflix.com   unlawful, illegal, fraudulent, or harmful purpose or activity.</p>
+                              
+                              <p>0.6. To engage in any other conduct that restricts or inhibits anyone&rsquo;s use or enjoyment of Service, or which, as determined by us, may harm or offend Company or users of Service or expose them to liability.</p>
+                              
+                              <p>Additionally, you agree not to:</p>
+                              
+                              <p>0.1. Use Service in any manner that could disable, overburden, damage, or impair Service or interfere with any other party&rsquo;s use of Service, including their ability to engage in real time activities through Service.</p>
+                              
+                              <p>0.2. Use any robot, spider, or other automatic device, process, or means to access Service for any purpose, including monitoring or copying any of the material on Service.</p>
+                              
+                              <p>0.3. Use any manual process to monitor or copy any of the material on Service or for any other unauthorized purpose without our prior written consent.</p>
+                              
+                              <p>0.4. Use any device, software, or routine that interferes with the proper working of Service.</p>
+                              
+                              <p>0.5. Introduce any viruses, trojan horses, worms, logic bombs, or other material which is malicious or technologically harmful.</p>
+                              
+                              <p>0.6. Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of Service, the server on which Service is stored, or any server, computer, or database connected to Service.</p>
+                              
+                              <p>0.7. Attack Service via a denial-of-service attack or a distributed denial-of-service attack.</p>
+                              
+                              <p>0.8. Take any action that may damage or falsify Company rating.</p>
+                              
+                              <p>0.9. Otherwise attempt to interfere with the proper working of Service.</p>
+                              
+                              <p>8. Analytics</p>
+                              
+                              <p>We may use third-party Service Providers to monitor and analyze the use of our Service.</p>
+                              
+                              <p>9. No Use By Minors</p>
+                              
+                              <p>Service is intended only for access and use by individuals at least eighteen (18) years old. By accessing or using Service, you warrant and represent that you are at least eighteen (18) years of age and with the full authority, right, and capacity to enter into this agreement and abide by all of the terms and conditions of Terms. If you are not at least eighteen (18) years old, you are prohibited from both the access and usage of Service.</p>
+                              
+                              <p>10. Accounts</p>
+                              
+                              <p>When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on Service.</p>
+                              
+                              <p>You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                              
+                              <p>You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you, without appropriate authorization. You may not use as a username any name that is offensive, vulgar or obscene.</p>
+                              
+                              <p>We reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders in our sole discretion.</p>
+                              
+                              <p>11. Intellectual Property</p>
+                              
+                              <p>Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of JavaFlix and its licensors. Service is protected by copyright, trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of JavaFlix.</p>
+                              
+                              <p>12. Copyright Policy</p>
+                              
+                              <p>We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on Service infringes on the copyright or other intellectual property rights (&ldquo;Infringement&rdquo;) of any person or entity.</p>
+                              
+                              <p>If you are a copyright owner, or authorized on behalf of one, and you believe that   the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to javaflix@gmail.com, with the subject line: &ldquo;Copyright Infringement&rdquo; and include in your claim a detailed description of the alleged Infringement as detailed below, under &ldquo;DMCA Notice and Procedure for Copyright Infringement Claims&rdquo;</p>
+                              
+                              <p>You may be held accountable for damages (including costs and attorneys&rsquo; fees) for misrepresentation or bad-faith claims on the infringement of any Content found on and/or through Service on your copyright.</p>
+                              
+                              <p>13. DMCA Notice and Procedure for Copyright Infringement Claims</p>
+                              
+                              <p>You may submit a notification pursuant to the Digital Millennium Copyright Act (DMCA) by providing our Copyright Agent with the following information in writing (see 17 U.S.C 512(c)(3) for further detail):</p>
+                              
+                              <p>0.1. an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright&rsquo;s interest;</p>
+                              
+                              <p>0.2. a description of the copyrighted work that you claim has been infringed, including the URL (i.e., web page address) of the location where the copyrighted work exists or a copy of the copyrighted work;</p>
+                              
+                              <p>0.3. identification of the URL or other specific location on Service where the material that you claim is infringing is located;</p>
+                              
+                              <p>0.4. your address, telephone number, and email address;</p>
+                              
+                              <p>0.5. a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;</p>
+                              
+                              <p>0.6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner&rsquo;s behalf.</p>
+                              
+                              <p>You can contact our Copyright Agent via email at javaflix@gmail.com.</p>
+                              
+                              <p>14. Error Reporting and Feedback</p>
+                              
+                              <p>You may provide us either directly at javaflix@gmail.com or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (&ldquo;Feedback&rdquo;). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.</p>
+                              
+                              <p>15. Links To Other Web Sites</p>
+                              
+                              <p>Our Service may contain links to third party web sites or services that are not owned or controlled by JavaFlix.</p>
+                              
+                              <p>JavaFlix has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>
+                              
+                              <p>For example, the outlined Terms of Use have been created using PolicyMaker.io, a free web application for generating high-quality legal documents. PolicyMaker&rsquo;s Terms and Conditions generator is an easy-to-use free tool for creating an excellent standard Terms of Service template for a website, blog, e-commerce store or app.</p>
+                              
+                              <p>YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES OR SERVICES.</p>
+                              
+                              <p>WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.</p>
+                              
+                              <p>16. Disclaimer Of   Warranty</p>
+                              
+                              <p>THESE SERVICES ARE PROVIDED BY COMPANY ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND ANY SERVICES OR ITEMS OBTAINED FROM US IS AT YOUR SOLE RISK.</p>
+                              
+                              <p>NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.</p>
+                              
+                              <p>COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR PARTICULAR PURPOSE.</p>
+                              
+                              <p>THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.</p>
+                              
+                              <p>17. Limitation Of Liability</p>
+                              
+                              <p>EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES (INCLUDING ATTORNEYS&rsquo; FEES AND ALL RELATED COSTS AND EXPENSES OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.</p>
+                              
+                              <p>18. Termination</p>
+                              
+                              <p>We may terminate or suspend your account and bar access to Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of Terms.</p>
+                              
+                              <p>If you wish to terminate your account, you may simply discontinue using Service.</p>
+                              
+                              <p>All provisions of Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+                              
+                              <p>19. Governing Law</p>
+                              
+                              <p>These Terms shall be governed and construed in accordance with the laws of Kazakhstan, which governing law applies to agreement without regard to its conflict of law provisions.</p>
+                              
+                              <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service and supersede and replace any prior agreements we might have had between us regarding Service.</p>
+                              
+                              <p>20. Changes To Service</p>
+                              
+                              <p>We reserve the right to withdraw or amend our Service, and any service or material we provide via Service, in our sole discretion without notice. We will not be liable if for any reason all or any   part of Service is unavailable at any time or for any period. From time to time, we may restrict access to some parts of Service, or the entire Service, to users, including registered users.</p>
+                              
+                              <p>21. Amendments To Terms</p>
+                              
+                              <p>We may amend Terms at any time by posting the amended terms on this site. It is your responsibility to review these Terms periodically.</p>
+                              
+                              <p>Your continued use of the Platform following the posting of revised Terms means that you accept and agree to the changes. You are expected to check this page frequently so you are aware of any changes, as they are binding on you.</p>
+                              
+                              <p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use Service.</p>
+                              
+                              <p>22. Waiver And Severability</p>
+                              
+                              <p>No waiver by Company of any term or condition set forth in Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of Company to assert a right or provision under Terms shall not constitute a waiver of such right or provision.</p>
+                              
+                              <p>If any provision of Terms is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of Terms will continue in full force and effect.</p>
+                              
+                              <p>23. Acknowledgement</p>
+                              
+                              <p>BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY THEM.</p>
+                              
+                              <p>24. Contact Us</p>
+                              
+                              <p>Please send your feedback, comments, requests for technical support by email: javaflix@gmail.com.</p></p>
+                            </div>
+                          </div>
+                        
+                          <!-- Modal Footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                          </div>
+                        
+                        </div>
+                        <!-- Modal Content: ends -->
+                        
+                      </div>
+                      
+                    </div>
+                    <!-- Modal Terms & Conditions -->   
+      </nav>
+      <!--/.Navbar-->
+
+       <!--Mask-->
+       <div id="intro" class="view">
+
+        <div class="mask rgba-black-strong">
+
+            <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+
+                <div class="row d-flex justify-content-center text-center">
+
+                    <div class="col-md-10">
+
+                        <!-- Heading -->
+                        <h2 id="headCapt" class="display-4 font-weight-bold white-text pt-5 mb-2">Last Christmas (2019)</h2>
+
+                        <!-- Divider -->
+                        <hr>
+
+                        <!-- Description -->
+                        <h4 class="white-text my-4">Merry Christmas! Feel like watching something?</h4>
+                        <h4 class="white-text my-4"> Let's search! <form id="search_engine" action="">
+                            <input class="search-input" type="search">
+                            <i class="search-engine fa fa-search"></i>
+                          </form></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.Mask-->
+
+    
+    </header>
+    <main>
+        <div class="container-movie">
+        
+            
+            <div class="movie-card">
+                <div class="movie-header ainbo">
+                    <div class="header-icon-container">
+                        <a href="#">
+                            <i class="material-icons header-icon"></i>
+                        </a>
+                    </div>
+                </div><!--movie-header-->
+                <div class="movie-content">
+                    <div class="movie-content-header">
+                        <a href="#">
+                            <h3 class="movie-title">Ainbo: Spirit of Amazon</h3>
+                        </a>
+                        <div class="netflix-logo"></div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="info-section">
+                            <label>Date & Time</label>
+                            <span>February 10, 2021</span>
+                        </div><!--date,time-->
+                    </div>
+                </div><!--movie-content-->
+            </div><!--movie-card-->
+            
+            <div class="movie-card">
+                <div class="movie-header conjuring">
+                    <div class="header-icon-container">
+                        <a href="#">
+                        </a>
+                    </div>
+                </div><!--movie-header-->
+                <div class="movie-content">
+                    <div class="movie-content-header">
+                        <a href="#">
+                            <h3 class="movie-title">The Conjuring: The Devil Made Me Do It</h3>
+                        </a>
+                        <div class="netflix-logo"></div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="info-section">
+                            <label>Date & Time</label>
+                            <span>September 10, 2020</span>
+                        </div><!--date,time-->
+                    </div>
+                </div><!--movie-content-->
+            </div><!--movie-card-->
+            
+            <div class="movie-card">
+                <div class="movie-header minions">
+                    <div class="header-icon-container">
+                        <a href="#">
+                        </a>
+                    </div>
+                </div><!--movie-header-->
+                <div class="movie-content">
+                    <div class="movie-content-header">
+                        <a href="#">
+                            <h3 class="movie-title">Minions: The Rise Of Gru</h3>
+                        </a>
+                        <div class="netflix-logo"></div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="info-section">
+                            <label>Date & Time</label>
+                            <span>June 17, 2021</span>
+                        </div><!--date,time-->
+                    </div>
+                </div><!--movie-content-->
+            </div><!--movie-card-->
+            
+            <div class="movie-card">
+                <div class="movie-header venom">
+                    <div class="header-icon-container">
+                        <a href="#">
+                        </a>
+                    </div>
+                </div><!--movie-header-->
+                <div class="movie-content">
+                    <div class="movie-content-header">
+                        <a href="#">
+                            <h3 class="movie-title">Venom: Let There Be Carnage</h3>
+                        </a>
+                        <div class="netflix-logo"></div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="info-section">
+                            <label>Date & Time</label>
+                            <span>June 24, 2021</span>
+                        </div><!--date,time-->
+                    </div>
+                </div><!--movie-content-->
+            </div><!--movie-card-->
+            
+        </div><!--container-->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Section: Contact-->
+        <section id="contact">
+
+            <!-- Heading -->
+            <h2 class="mb-5 font-weight-bold">Contact us</h2>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-5 col-md-12">
+                    <!-- Form contact -->
+                    <form id="form" class="p-5 grey-text">
+                        <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
+                            <input type="text" id="name" class="form-control form-control-sm">
+                            <label for="form3">Your name</label>
+                        </div>
+                        <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
+                            <input type="email" id="email" class="form-control form-control-sm">
+                            <label for="form2">Your email</label>
+                        </div>
+                        <div class="md-form form-sm"> <i class="fa fa-tag prefix"></i>
+                            <input type="text" id="subject" class="form-control form-control-sm">
+                            <label for="form34">Subject</label>
+                        </div>
+                        <div class="md-form form-sm"> <i class="fa fa-pencil prefix"></i>
+                            <textarea type="text" id="message" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                            <label for="form8">Your message</label>
+                        </div>
+                        <div class=" mt-4">
+                            <button type="submit" id="send" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                    <!-- Form contact -->
+
+        <div id="map"></div>
+
+        <script>
+            function initMap() {
+                var Navoi = {lat: 43.219989040013736, lng: 76.88018918264449};
+
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 17,
+                    center: Navoi
+                });
+
+                const marker = new google.maps.Marker({
+                position: Navoi,
+                map: map,
+                });
+                
+            }
+        </script>
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu1CZ4T9B_9glVR6B489fV7WNPuXusccc&callback=initMap">
+        </script>  
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: #d91111;">
+    <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+        
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        
+        <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+    </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold"></h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        
+
+            <div class="container">
+            <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                <ul class="icons">
+                <li>
+                    <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                </ul>
+    
+            </div>
+
+            </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Sponsored By</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+            <a href="#!">Netflix</a>
+        </p>
+        <p>
+            <a href="#!">Coca-Cola</a>
+        </p>
+        <p>
+            <a href="#!">Lays</a>
+        </p>
+        <p>
+            <a href="#!">DC</a>
+        </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+            <a href="#!"> Account</a>
+        </p>
+        <p>
+            <a href="#!">Frequently Asked Questions</a>
+        </p>
+        <p>
+            <a href="#!">Contact</a>
+        </p>
+        <p>
+            <a href="#!">Help</a>
+        </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+            <img src="https://img.icons8.com/emoji/35/000000/pushpin-emoji.png"/>Navoi Towers, Almaty, Kazakhstan</p>
+        <p>
+            <img src="https://img.icons8.com/metro/30/fa314a/email.png"/></i> javaflix@gmail.com</p>
+        <p>
+            <img src="https://img.icons8.com/metro/26/fa314a/phone.png"/></i> + 7 747 896 45 78</p>
+        
+        
+
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#">JavaFlix</a>
+    </div>
+    <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    <script>
+    $(document).ready(function() {
+        setInterval(window.onload = function(){
+            let sendButton = document.getElementById("send");
+            let form = document.getElementById("form");
+            
+            form.addEventListener('submit',function(e){
+                e.preventDefault();
+            })
+
+            sendButton.addEventListener('click',function(e){
+                let name = document.getElementById("name");
+                let email = document.getElementById("email");
+                let subject = document.getElementById("subject");
+                let message = document.getElementById("message");
+
+                name = name.value;
+                localStorage.setItem('name', name);
+
+                email = email.value;
+                localStorage.setItem('email', email);
+
+                subject = subject.value;
+                localStorage.setItem('subject', subject);
+
+                message = message.value;
+                localStorage.setItem('message', message);
+            })
+
+            window.onresize = function() {
+            var currCenter = map.getCenter();
+            google.maps.event.trigger(map, 'resize');
+            map.setCenter(currCenter);
+        };
+            
+        });
+    });
+    </script>
+<!--Snow-->
+
+<div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+  </div>
+  
+          
+</body>
+</html>

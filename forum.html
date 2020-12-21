@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <style>
+        
+       
+    </style>
+</head>
+<body>
+     <!-- Demo Content -->
+  <div class="container">
+
+    <h1>MixItUp: Input Search</h1>
+    
+    <button class="filter" data-filter="all">All</button>
+    <button class="filter" data-filter=".blue">Blue</button>
+    <button class="filter" data-filter=".orange">Orange</button>
+    <button class="filter" data-filter=".red">Red</button>
+    
+    <input type="text" id="input" placeholder="Type here">
+
+    <hr>
+    <div class="mix blue">
+      <p class="title">Red</p>
+    </div>
+    <div class="mix red">
+      <p class="title">Reddit</p>
+    </div>
+    <div class="mix orange">
+      <p class="title">Orange</p>
+    </div>
+    <div class="mix red">
+      <p class="title">Blue</p>
+    </div>
+    <div class="mix orange">
+      <p class="title">Red Rover</p>
+    </div>
+    <div class="mix blue">
+      <p class="title">Ed</p>
+    </div>
+  </div>
+
+      <script>
+         // On document ready:
+      
+         $( document ).ready(function() {
+          $(function(){
+      
+        // Instantiate MixItUp:
+      
+        $('.movies-container').mixItUp(); //trigger = container
+
+        var inputText;
+        var $matching = $();
+
+        // Delay function
+        var delay = (function(){
+          var timer = 0;
+          return function(callback, ms){
+            clearTimeout (timer);
+            timer = setTimeout(callback, ms);
+          };
+        })();
+
+        $("#inputSearch").keyup(function(){
+          // Delay function invoked to make sure user stopped typing
+          delay(function(){
+            inputText = $("#inputSearch").val().toLowerCase();
+            
+            // Check to see if input field is empty
+            if ((inputText.length) > 0) {            
+              $( '.mix').each(function() {
+                $this = $("this");
+                
+                // add item to be filtered out if input text matches items inside the title   
+                if($(this).children('.title').text().toLowerCase().match(inputText)) {
+                  $matching = $matching.add(this);
+                }
+                else {
+                  // removes any previously matched item
+                  $matching = $matching.not(this);
+                }
+              });
+              $(".movies-container").mixItUp('filter', $matching);
+            }
+
+            else {
+              // resets the filter to show all item if input is empty
+              $(".movies-container").mixItUp('filter', 'all');
+            }
+          }, 200 );
+        });
+       
+      });
+        });
+      </script>
+   
+     
+
+
+</body>
+</html>

@@ -1,0 +1,631 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+    /* background-image: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2019/06/Wonder-Woman-1984-textless-movie-poster.jpg"); */
+}
+
+#intro {
+    background-image: url("https://images.hdqwalls.com/wallpapers/last-christmas-2019-h2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    filter:  brightness(40%);
+}
+
+#headCapt {
+    margin: auto;
+    margin-top: 200px !important;
+    color: white;
+    filter: none;
+}
+nav{
+    box-shadow: 0 8px 8px -2px rgba(0,0,0,.2);
+}
+
+.white-text{
+    color: white !important;
+    filter: brightness(100%);
+
+}
+
+.icons {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+.iconsDiv{
+  margin-bottom: 15em;
+}
+
+.icons li {
+  list-style:none;
+  margin:0 5px;
+}
+
+.icons li a .fa {
+  font-size: 28px;
+  color: #262626;
+  line-height:30px;
+  transition: .5s;
+  padding-right: 40px;
+}
+
+.icons li a span {
+  padding:0;
+  margin:0;
+  position:absolute;
+  top: 30px;
+  color: #262626;
+  letter-spacing: 4px;
+  transition: .5s;
+}
+
+.icons li a {
+  text-decoration: none;
+  display:absolute;
+  display:block;
+  width:90px;
+  height:30px;
+  background: #fff;
+  text-align:left;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0,0);
+  transition:.5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+.icons li a:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+.icons li a:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.icons li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+.icons li:hover .fa {
+  color:#fff;
+}
+
+.icons li:hover span {
+  color:#fff;
+}
+
+.icons li:hover:nth-child(1) a{
+  background: #3b5998;
+}
+.icons li:hover:nth-child(1) a:before{
+  background: #365492;
+}
+.icons li:hover:nth-child(1) a:after{
+  background: #4a69ad;
+}
+
+.icons li:hover:nth-child(2) a{
+  background: #00aced;
+}
+.icons li:hover:nth-child(2) a:before{
+  background: #097aa5;
+}
+.icons li:hover:nth-child(2) a:after{
+  background: #53b9e0;
+}
+
+.icons li:hover:nth-child(3) a{
+  background: #dd4b39;
+}
+.icons li:hover:nth-child(3) a:before{
+  background: #b33a2b;
+}
+.icons li:hover:nth-child(3) a:after{
+  background: #e66a5a;
+}
+
+.icons li:hover:nth-child(4) a{
+  background: #e4405f;
+}
+ul li:hover:nth-child(4) a:before{
+  background: #d81c3f;
+}
+.icons li:hover:nth-child(4) a:after{
+  background: #e46880;
+}
+
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    background: pr;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    margin-top: 3em !important;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+
+  hr {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    border: 9 !important;
+    border-top: 2px solid #ffffff !important;
+  }
+
+ #contact{
+     margin-top: 50px;
+    
+
+ }
+
+ .mb-5{
+    margin-left: 45px;
+ }
+
+ /* form class */
+ .p-5{
+     margin-top: -4em;
+ }
+ 
+#map{
+    height: 500px;
+    width: 700px;
+    margin: 15em;
+    margin-top: -550px;
+    margin-left: 700px;
+}
+
+/* contact us text */
+.mb-5  {
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2019/06/Wonder-Woman-1984-textless-movie-poster.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* get connected footer text */
+.mb-0 {
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://i.pinimg.com/originals/15/02/f2/1502f27efadcafab32b8b159fcd9e5dc.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+i{
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://static3.srcdn.com/wordpress/wp-content/uploads/2019/06/Wonder-Woman-1984-textless-movie-poster.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+h6{
+   color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://i.pinimg.com/originals/15/02/f2/1502f27efadcafab32b8b159fcd9e5dc.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+#login, #sign{
+  background-color: white !important;
+  background: url("https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Modal */
+.modal-color{
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("https://wallpapercave.com/wp/wp2602308.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-dark .font-small {
+  font-size: 0.8rem; }
+
+.form-dark [type="radio"] + label,
+.form-dark [type="checkbox"] + label {
+  font-size: 0.8rem; }
+
+.form-dark [type="checkbox"] + label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px; }
+
+.form-dark .md-form label {
+  color: #fff; }
+
+.form-dark input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=email]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-dark input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=password]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-dark input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  z-index: 0;
+  border: 1.5px solid #fff;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+
+.form-dark input[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent #00c851 #00c851 transparent;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  /* -webkit-backface-visibility: hidden; */
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+
+.form-dark .modal-header {
+    border-bottom: none;
+}
+
+
+/* Search engine */
+
+#search_engine{
+    margin-left: 240px;
+    margin-top: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+.search-engine{
+    color: white;  
+    background: url("https://st2.depositphotos.com/1030393/8390/v/950/depositphotos_83907596-stock-illustration-gold-liquid-texture.jpg") no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.search-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.search-engine{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #E50914;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+#search_engine:hover{
+    width: 350px;
+    cursor: pointer;
+}
+
+#search_engine:hover input{
+    display: block;
+}
+
+#search_engine:hover .fa{
+    background-image: url("https://st2.depositphotos.com/1030393/8390/v/950/depositphotos_83907596-stock-illustration-gold-liquid-texture.jpg");
+    color: white;
+}
+
+/* Movie carousel */
+.intro-movie {
+    text-align: center;
+  }
+  
+  /* ul {
+    list-style-type: none;
+  } */
+  
+  
+  .container-movie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .movie-card {
+    background: #ffffff;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 315px;
+    margin: 2em;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  .movie-header {
+    padding: 0;
+    margin: 0;
+    height: 367px;
+    width: 100%;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .ainbo {
+    background: url("https://fs.kinomania.ru/file/film/d/89/d8969a1aeda203a6041dc37839623cdd.jpeg");
+    background-size: cover;
+  }
+  
+  .conjuring {
+    background: url("https://static.metacritic.com/images/products/movies/1/e9e8e62fa20267dd11a9f68abc362c4f.jpg");
+    background-size: cover;
+  }
+  
+  .minions {
+    background: url("https://www.25thframe.co.uk/film-images/minions_the_rise_of_gru.jpg");
+    background-size: cover;
+    background-position: 100% 100%;
+  }
+  
+  .venom {
+    background: url("https://www.dreadcentral.com/wp-content/uploads/2020/09/Venom-Let-There-Be-Carnage-poster-1024x1268.jpg");
+    background-size: cover;
+    background-position: 100% 80%;
+  }
+  
+  .header-icon-container {
+    position: relative;
+  }
+  
+  .header-icon {
+    width: 100%;
+    height: 367px;
+    line-height: 367px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 54px;
+    text-shadow: 0px 0px 20px #6abcea, 0px 5px 20px #6ABCEA;
+    opacity: .85;
+  }
+  
+  .header-icon:hover {
+    background: rgba(0, 0, 0, 0.15);
+    font-size: 74px;
+    text-shadow: 0px 0px 20px #6abcea, 0px 5px 30px #6ABCEA;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 1;
+  }
+  
+  .movie-card:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .movie-content {
+    padding: 18px 18px 24px 18px;
+    margin: 0;
+  }
+  
+  .movie-content-header, .movie-info {
+    display: table;
+    width: 100%;
+  }
+  
+  .movie-title {
+    font-size: 24px;
+    margin: 0;
+    display: table-cell;
+  }
+  
+  .netflix-logo {
+    width: 100px;
+    height: 30px;
+    background: url("https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png") no-repeat;
+    background-size: contain;
+    display: table-cell;
+    position: relative;
+    margin-top: 5px;
+    float: left;
+  }
+  
+  .movie-info {
+    margin-top: 1em;
+  }
+  
+  .info-section {
+    display: table-cell;
+    text-transform: uppercase;
+    text-align: center;
+    float: left;
+  }
+  
+  .info-section:first-of-type {
+    text-align: left;
+  }
+  
+  .info-section:last-of-type {
+    text-align: right;
+  }
+  
+  .info-section label {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: .5em;
+    font-size: 9px;
+  }
+  
+  .info-section span {
+    font-weight: 700;
+    font-size: 11px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .movie-card {
+      width: 95%;
+      max-width: 95%;
+      margin: 1em;
+      display: block;
+    }
+  
+    .container-movie {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+/* Snow */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
